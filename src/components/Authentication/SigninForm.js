@@ -41,7 +41,7 @@ export default function SigninForm() {
         history.push("/");
       })
       .catch((err) => {
-        // toast.error(err.response.data.message);
+        toast.error(err.response.data.message);
         console.log(err);
         // console.log(err.response.data.message);
       });
