@@ -13,7 +13,7 @@ import { Bar } from "react-chartjs-2";
 import { URL } from "../Authentication/url";
 
 //chart
-export default function ChartData() {
+export  function ChartData() {
   const value = [];
   const months = [];
   const getData = () => {
@@ -32,7 +32,7 @@ export default function ChartData() {
 
   useEffect(() => {
     getData();
-  }, [getData]);
+  });
   return (
     <div className="chartContainer">
       {value ? <Chart value={value} months={months} /> : ""}

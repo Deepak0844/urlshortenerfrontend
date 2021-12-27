@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./dashboard.css";
 import { PageHeader } from "antd";
 import { URL } from "../Authentication/url";
-import  ChartData  from "./ChartData";
+import  {ChartData}  from "./ChartData";
 
 //Dashboard
 export default function Dashboard() {
