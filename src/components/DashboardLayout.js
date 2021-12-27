@@ -16,7 +16,7 @@ import { Suspense } from "react";
 import ProtectedRouter from "./Authentication/protected";
 import { Loader } from "./loader";
 
-const { Header, Content, Sider } = Layout; //for dashboard
+const { Header, Content, Sider } = Layout; //for dashboard layout
 export default function DashboardLayout() {
   const history = useHistory();
   const [anchorEl, setAnchorEl] = useState(null);
