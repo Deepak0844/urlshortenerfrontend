@@ -31,7 +31,7 @@ export function ChartData() {
   };
   useEffect(() => {
     getData();
-  }, [getData]);
+  });
 
   return (
     <div className="chartContainer">
