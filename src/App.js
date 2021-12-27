@@ -19,6 +19,15 @@ const SignUpForm = React.lazy(() =>
 const ForgetPassword = React.lazy(() =>
   import("./components/Authentication/forgetpassword")
 );
+const Activate = React.lazy(() =>
+  import("./components/Authentication/accountActivation")
+);
+const PasswordVerify = React.lazy(() =>
+  import("./components/Authentication/resetPassword")
+);
+const PasswordChangedMsg = React.lazy(() =>
+  import("./components/Authentication/passSuccessChanged")
+);
 
 export function App() {
   return (
@@ -35,19 +44,37 @@ export function App() {
               exact
               path="/signin"
               name="signin Page"
-              render={(props) => <SigninForm {...props} />}
+              component={SigninForm}
             />
             <Route
               exact
               path="/signup"
               name="signup Page"
-              render={(props) => <SignUpForm {...props} />}
+              component={SignUpForm}
             />
             <Route
               exact
               path="/forget-password"
               name="forgetpassword Page"
-              render={(props) => <ForgetPassword {...props} />}
+              component={ForgetPassword}
+            />
+            <Route
+              exact
+              path="/account-verification/:token"
+              name="account activate page"
+              component={Activate}
+            />
+            <Route
+              exact
+              path="/forgot-password/verify/:token"
+              name="password changing Page"
+              component={PasswordVerify}
+            />
+            <Route
+              exact
+              path="/password-changed-successfully"
+              name="success msg Page"
+              component={PasswordChangedMsg}
             />
             <Route
               path="/"
@@ -57,7 +84,6 @@ export function App() {
           </Switch>
         </Suspense>
       </Router>
-      {/* <DashboardLayout /> */}
     </React.Fragment>
   );
 }

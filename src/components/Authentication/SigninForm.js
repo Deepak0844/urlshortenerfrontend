@@ -1,4 +1,4 @@
-import './authentication.css'
+import "./authentication.css";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";

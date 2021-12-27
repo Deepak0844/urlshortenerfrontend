@@ -73,7 +73,8 @@ export default function DataTable() {
                 <h6>
                   <a
                     href={`${URL}/url/${row.shortId}`}
-                    target="_blank" rel="noreferrer"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     https://backendurlshortener.herokuapp.com/url/{row.shortId}
                   </a>

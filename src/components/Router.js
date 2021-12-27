@@ -1,9 +1,7 @@
 import { lazy } from "react";
 
 const DashBoard = lazy(() => import("./urlShortener/Dashboard"));
-const URLShortener = lazy(() =>
-  import("./urlShortener/URLShortener")
-);
+const URLShortener = lazy(() => import("./urlShortener/URLShortener"));
 const DataTable = lazy(() => import("./urlShortener/DataTable"));
 const NotFound = lazy(() => import("./urlShortener/notFound"));
 
@@ -30,5 +28,5 @@ export const Routes = [
   {
     path: "**",
     component: NotFound,
-  }
+  },
 ];

@@ -1,4 +1,4 @@
-import './authentication.css'
+import "./authentication.css";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
@@ -147,7 +147,7 @@ export default function SignUpForm() {
           <Button
             color="primary"
             variant="contained"
-            style={{margin:'20px' }}
+            style={{ margin: "20px" }}
             type="submit"
           >
             Sign Up

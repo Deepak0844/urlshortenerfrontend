@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./dashboard.css";
 import { PageHeader } from "antd";
 import { URL } from "../Authentication/url";
-import  {ChartData}  from "./ChartData";
+import { ChartData } from "./ChartData";
 
 //Dashboard
 export default function Dashboard() {
@@ -39,7 +39,10 @@ export default function Dashboard() {
         console.log(err.response.data);
       });
   }, []);
-
+  const totalClick = data.reduce(
+    (total, count) => parseInt(total + count.clickCount),
+    0
+  );
   return (
     <section>
       <PageHeader
@@ -52,15 +55,13 @@ export default function Dashboard() {
           background: "white",
         }}
       />
-      ,
+      {/* card-1 */}
       <div className="cardContainer">
         <div className="card1">
           <div className="mainCardContent">
             <div className="content">
               <h6>Total hits</h6>
-              <h3>
-                {data.reduce((total, count) => +total + count.clickCount, 0)}
-              </h3>
+              <h3> {totalClick}</h3>
             </div>
           </div>
         </div>

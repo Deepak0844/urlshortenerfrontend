@@ -83,7 +83,22 @@
 .signBtn span {
   color: rgb(42, 6, 248);
 }
-
+.successMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 50%;
+  text-align: center;
+  max-width: 550px;
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 10px;
+}
 @media (max-width: 500px) {
   .signinForm,
   .signupForm,

@@ -75,7 +75,7 @@ export default function URLShortener() {
 
           {url ? (
             <div>
-              <h4 style={{ marginTop: "50px"}}>Shorten Link</h4>
+              <h4 style={{ marginTop: "50px" }}>Shorten Link</h4>
               <div className="copyInput">
                 <input
                   variant="outlined"
@@ -84,7 +84,7 @@ export default function URLShortener() {
                   readOnly
                   style={{
                     width: "520px",
-                    marginRight:"5px",
+                    marginRight: "5px",
                     background: "transparent",
                     outline: "none",
                     border: "none",

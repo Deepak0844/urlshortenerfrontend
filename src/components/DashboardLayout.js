@@ -16,7 +16,6 @@ import { Suspense } from "react";
 import ProtectedRouter from "./Authentication/protected";
 import { Loader } from "./loader";
 
-
 const { Header, Content, Sider } = Layout; //for dashboard
 export default function DashboardLayout() {
   const history = useHistory();
