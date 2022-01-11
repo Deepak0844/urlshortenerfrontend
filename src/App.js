@@ -38,7 +38,7 @@ export function App() {
         pauseOnHover={false}
       />
       <Router>
-        <Suspense fallback={Loader}>
+        <Suspense fallback={<Loader />}>
           <Switch>
             <Route
               exact
@@ -79,7 +79,7 @@ export function App() {
             <Route
               path="/"
               name="dashboard"
-              render={(props) => <DashboardLayout {...props} />}
+              component={(props) => <DashboardLayout {...props} />}
             />
           </Switch>
         </Suspense>

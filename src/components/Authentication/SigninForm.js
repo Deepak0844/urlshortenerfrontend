@@ -61,7 +61,7 @@ export default function SigninForm() {
           helperText={errors.email && touched.email && errors.email}
           onChange={handleChange}
           onBlur={handleBlur}
-          margin="normal"
+          margin="dense"
         ></TextField>
 
         <TextField
@@ -76,7 +76,7 @@ export default function SigninForm() {
           helperText={errors.password && touched.password && errors.password}
           onChange={handleChange}
           onBlur={handleBlur}
-          margin="normal"
+          margin="dense"
         ></TextField>
 
         <div className="signBtn">

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -14,9 +14,9 @@ import { URL } from "../Authentication/url";
 
 //chart
 export function ChartData() {
-  const value = [];
-  const months = [];
-  const getData = () => {
+  const [value] = useState([]);
+  const [months] = useState([]);
+  useEffect(() => {
     axios
       .get(`${URL}/url/data/chart`)
       .then((res) => {
@@ -28,10 +28,7 @@ export function ChartData() {
       .catch((err) => {
         console.log(err);
       });
-  };
-  useEffect(() => {
-    getData();
-  });
+  }, [months, value]);
 
   return (
     <div className="chartContainer">

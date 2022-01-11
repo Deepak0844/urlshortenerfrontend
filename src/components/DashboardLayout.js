@@ -125,18 +125,16 @@ export default function DashboardLayout() {
           <Content style={{ minHeight: "92.8vh", height: "auto" }}>
             <div className="site-layout-background">
               {/* adding all components to content */}
-              <Suspense fallback={Loader}>
+              <Suspense fallback={<Loader />}>
                 <Switch>
-                  {Routes.map((route, index) => {
-                    return (
-                      <ProtectedRouter
-                        path={route.path}
-                        key={index}
-                        component={route.component}
-                        exact={route.exact}
-                      />
-                    );
-                  })}
+                  {Routes.map((route, index) => (
+                    <ProtectedRouter
+                      path={route.path}
+                      key={index}
+                      component={route.component}
+                      exact={route.exact}
+                    />
+                  ))}
                 </Switch>
               </Suspense>
             </div>

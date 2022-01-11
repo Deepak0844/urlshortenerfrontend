@@ -2,7 +2,7 @@
 .signupForm,
 .resetPassword,
 .forgetPassForm {
-  height: 400px;
+  height: 370px;
   width: 400px;
   background-color: rgba(255, 255, 255, 0.13);
   position: absolute;
@@ -15,7 +15,10 @@
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
   padding: 35px 35px;
   padding-bottom: 20px;
-  z-index: 0;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
 }
 .signupForm {
   height: 590px;
@@ -61,14 +64,7 @@
   text-align: center;
   margin: -10px;
 }
-.signinForm,
-.signupForm * {
-  font-family: "Poppins", sans-serif;
-  color: #ffffff;
-  letter-spacing: 0.5px;
-  outline: none;
-  border: none;
-}
+
 .signBtn {
   display: flex;
   justify-content: center;

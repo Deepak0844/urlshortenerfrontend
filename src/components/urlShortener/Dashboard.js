@@ -10,7 +10,6 @@ export default function Dashboard() {
   const [createdPerDay, setcreatedPerDay] = useState([]);
   const [createdThisMonth, setcreatedThismonth] = useState([]);
   const [data, setData] = useState([""]);
-  console.log(data);
   useEffect(() => {
     axios
       .get(`${URL}/url`)
