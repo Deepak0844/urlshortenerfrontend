@@ -26,7 +26,11 @@ export default function DataTable() {
   const [url, setUrl] = useState([]);
   useEffect(() => {
     axios
-      .get(`${URL}/url`)
+      .get(`${URL}/url`, {
+        headers: {
+          "x-auth-token": localStorage.getItem("token"),
+        },
+      })
       .then((res) => {
         setUrl(res.data);
       })

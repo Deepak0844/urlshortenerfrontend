@@ -12,7 +12,11 @@ export default function Dashboard() {
   const [data, setData] = useState([""]);
   useEffect(() => {
     axios
-      .get(`${URL}/url`)
+      .get(`${URL}/url`, {
+        headers: {
+          "x-auth-token": localStorage.getItem("token"),
+        },
+      })
       .then((res) => {
         setData(res.data);
       })
@@ -21,7 +25,11 @@ export default function Dashboard() {
       });
 
     axios
-      .get(`${URL}/url/created/perday`)
+      .get(`${URL}/url/created/perday`, {
+        headers: {
+          "x-auth-token": localStorage.getItem("token"),
+        },
+      })
       .then((res) => {
         setcreatedPerDay(res.data);
       })
@@ -30,7 +38,11 @@ export default function Dashboard() {
       });
 
     axios
-      .get(`${URL}/url/created/permonth`)
+      .get(`${URL}/url/created/permonth`, {
+        headers: {
+          "x-auth-token": localStorage.getItem("token"),
+        },
+      })
       .then((res) => {
         setcreatedThismonth(res.data);
       })

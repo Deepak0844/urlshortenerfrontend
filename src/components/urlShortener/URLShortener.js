@@ -36,7 +36,11 @@ export default function URLShortener() {
     console.log(url);
 
     axios
-      .post(`${URL}/url`, url)
+      .post(`${URL}/url`, url, {
+        headers: {
+          "x-auth-token": localStorage.getItem("token"),
+        },
+      })
       .then((res) => {
         toast.success("Short URL created successfully");
         setUrl(res.data.shortUrl);

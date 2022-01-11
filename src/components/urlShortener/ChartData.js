@@ -9,8 +9,8 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { Bar } from "react-chartjs-2";
 import { URL } from "../Authentication/url";
+import { Bar } from "react-chartjs-2";
 
 //chart
 export function ChartData() {
@@ -18,7 +18,11 @@ export function ChartData() {
   const [months] = useState([]);
   useEffect(() => {
     axios
-      .get(`${URL}/url/data/chart`)
+      .get(`${URL}/url/data/chart`, {
+        headers: {
+          "x-auth-token": localStorage.getItem("token"),
+        },
+      })
       .then((res) => {
         for (const dataObj of res.data) {
           months.push(dataObj.Month);
@@ -36,6 +40,7 @@ export function ChartData() {
     </div>
   );
 }
+
 function Chart({ value, months }) {
   ChartJS.register(
     CategoryScale,
